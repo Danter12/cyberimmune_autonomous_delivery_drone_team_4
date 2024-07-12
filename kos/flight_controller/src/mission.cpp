@@ -199,3 +199,13 @@ void printMission() {
         }
     }
 }
+
+
+MissionCommand* com()
+{
+    return commands;
+}
+uint32_t numcom()
+{
+    return commandNum;
+}
