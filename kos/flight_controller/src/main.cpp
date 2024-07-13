@@ -162,10 +162,10 @@ void coridor_control(coridor* coridors,int count_coridor)
             
         }
         
-        double len = distance(x * 1e-7, y*1e-7, coridors[count].n1.latitude, coridors[count].n1.longitude);
+        double len = distance(x * 1e-7, y*1e-7, coridors[count].n1.latitude*1e-7, coridors[count].n1.longitude*1e-7);
         passed = (passed > len ? passed : len);
         fprintf(stderr, "%f %f\n", passed, len);
-        if(passed - len > 1.5*1e7){
+        if(passed - len > 1.5){
             enableBuzzer();
             while(!setKillSwitch(0)){}
             fprintf(stderr, "ne tyda\n");
